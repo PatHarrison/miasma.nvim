@@ -69,7 +69,7 @@ call s:HL('IncSearch', s:MiasmaBlack, s:MiasmaMagenta, 'NONE', 'NONE', 'NONE')
 call s:HL('lCursor', 'bg', 'fg', 'NONE', 'NONE', 'NONE')
 call s:HL('FoldColumn', s:MiasmaLightGrey, s:MiasmaDarkGrey, 'NONE', 'NONE', 'NONE')
 call s:HL('Folded', s:MiasmaYellow, s:MiasmaDarkGrey, 'NONE', 'NONE', 'NONE')
-call s:HL('LineNr', s:MiasmaRed, s:MiasmaDarkGrey, 'NONE', 'NONE', 'NONE')
+call s:HL('LineNr', s:MiasmaLightGrey, s:MiasmaDarkGrey, 'NONE', 'NONE', 'NONE')
 hi! link CurSearch Search
 hi! link CursorLineFold FoldColumn
 hi! link CursorLineSign SignColumn
@@ -114,14 +114,14 @@ call s:HL('Comment', s:MiasmaLightGrey, 'NONE')
 call s:HL('Constant', s:MiasmaBlue, 'NONE')
 hi! link @constant.builtin Special
 hi! link @constant Constant
-call s:HL('String', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'NONE')
+call s:HL('String', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'italic')
 call s:HL('Character', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'NONE')
-call s:HL('Number', s:MiasmaBlue, 'NONE', 'NONE', 'NONE', 'NONE')
+call s:HL('Number', s:MiasmaBlue, 'NONE', 'NONE', 'NONE', 'italic')
 call s:HL('Boolean', s:MiasmaMagenta, 'NONE')
 call s:HL('Float', s:MiasmaMagenta, 'NONE')
 call s:HL('Identifier', s:MiasmaWhite, 'NONE', 'NONE', 'NONE', 'NONE')
 call s:HL('Function', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'NONE')
-call s:HL('Statement', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'bold')
+call s:HL('Statement', s:MiasmaRed, 'NONE', 'NONE', 'NONE', 'bold')
 hi! link Conditional Statement
 hi! link Repeat Statement
 hi! link Label Statement
@@ -184,6 +184,14 @@ hi! link Substitute Search
 hi! link @field Identifier
 hi! link FloatTitle Title
 hi! link @keyword Keyword
+
+" python
+call s:HL('PythonClassVar', s:MiasmaMagenta, 'NONE', 'NONE', 'NONE', 'italic')
+call s:HL('PythonClass', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'bold')
+call s:HL('PythonOperator', s:MiasmaYellow, 'NONE', 'NONE', 'NONE', 'bold')
+call s:HL('PythonDottedName', s:MiasmaYellow, 'NONE', 'NONE', 'NONE', 'NONE')
+hi! link PythonDecorator PythonDottedName
+call s:HL('PythonBuiltinType', s:MiasmaCyan, 'NONE', 'NONE', 'NONE', 'bold')
 
 " Diagnostic
 call s:HL('DiagnosticDeprecated', 'NONE', 'NONE', s:MiasmaRed, 'NONE', 'strikethrough')
