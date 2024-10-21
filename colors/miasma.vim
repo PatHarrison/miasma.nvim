@@ -26,6 +26,7 @@ let s:MiasmaBlue = '#8da1b9'
 let s:MiasmaMagenta = '#c8adc0'
 let s:MiasmaCyan = '#c2c2b0'
 let s:MiasmaWhite = '#d7c483'
+let s:MiasmaOffWhite = '#ebdbb2'
 
 " Builds and executes highlight group colors
 function! s:HL(group, fg, bg, ...)
@@ -56,7 +57,7 @@ call s:HL('WarningMsg', s:MiasmaYellow, 'NONE', 'NONE', 'NONE', 'NONE')
 call s:HL('Question', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'bold')
 call s:HL('Title', s:MiasmaYellow, 'NONE', 'NONE', 'NONE', 'bold')
 call s:HL('SignColumn', s:MiasmaLightGrey, s:MiasmaDarkGrey, 'NONE', 'NONE', 'NONE')
-call s:HL('ColorColumn', 'NONE', s:MiasmaBlack)
+call s:HL('ColorColumn', 'NONE', s:MiasmaDarkGrey)
 hi! link Conceal Ignore
 call s:HL('CursorColumn', 'NONE', s:MiasmaDarkGrey)
 call s:HL('Cursor', s:MiasmaBlack, s:MiasmaRed)
@@ -114,7 +115,7 @@ call s:HL('Comment', s:MiasmaLightGrey, 'NONE')
 call s:HL('Constant', s:MiasmaBlue, 'NONE')
 hi! link @constant.builtin Special
 hi! link @constant Constant
-call s:HL('String', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'italic')
+call s:HL('String', s:MiasmaYellow, 'NONE', 'NONE', 'NONE', 'italic')
 call s:HL('Character', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'NONE')
 call s:HL('Number', s:MiasmaBlue, 'NONE', 'NONE', 'NONE', 'italic')
 call s:HL('Boolean', s:MiasmaMagenta, 'NONE')
@@ -149,9 +150,9 @@ call s:HL('Underlined', s:MiasmaGreen, 'NONE', 'NONE', 'NONE', 'underline')
 call s:HL('Ignore', s:MiasmaLightGrey, 'NONE', 'NONE', 'NONE', 'underline')
 call s:HL('Error', s:MiasmaCyan, s:MiasmaRed, 'NONE', 'NONE', 'NONE')
 call s:HL('ErrorMsg', s:MiasmaRed, s:MiasmaBlack, 'NONE', 'NONE', 'NONE')
-call s:HL('Todo', s:MiasmaYellow, 'NONE', 'NONE', 'NONE', 'bold,underline')
+call s:HL('Todo', s:MiasmaRed, 'NONE', 'NONE', 'NONE', 'bold,underline')
 
-call s:HL('Normal', s:MiasmaWhite, s:MiasmaBlack, 'NONE', 'NONE', 'NONE')
+call s:HL('Normal', s:MiasmaOffWhite, s:MiasmaBlack, 'NONE', 'NONE', 'NONE')
 call s:HL('NonText', s:MiasmaLightGrey, 'NONE', 'NONE', 'NONE', 'bold')
 call s:HL('FloatShadow', 'NONE', s:MiasmaBlack, 'NONE', 'NONE', 'NONE')
 call s:HL('FloatShadowThrough', 'NONE', s:MiasmaBlack, 'NONE', 'NONE', 'NONE')
